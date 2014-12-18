@@ -1,16 +1,14 @@
 {
 	"name": "teewebapp/page",
-	"description": "Page Module for TeeWebApp",
+	"description": "Banner Module for TeeWebApp",
 	"keywords": ["teewebapp", "page"],
 	"license": "MIT",
 	"require": {
-		"teewebapp/system": "dev-master@dev",
-		"cviebrock/eloquent-sluggable": "2.*",
-		"codesleeve/laravel-stapler": "1.*"
+		"teewebapp/system": "dev-master@dev"
 	},
 	"autoload": {
 		"psr-4": {
-			"Tee\\Page\\": "."
+			"Tee\\Banner\\": "."
 		}
 	},
 	"minimum-stability": "stable"

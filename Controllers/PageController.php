@@ -1,31 +1,31 @@
 <?php
 
-namespace Tee\Page\Controllers;
+namespace Tee\Banner\Controllers;
 
 use Tee\System\Controllers\BaseController;
 
-use Tee\Page\Models\Page;
+use Tee\Banner\Models\Banner;
 use View, Input;
 
-class PageController extends BaseController {
+class BannerController extends BaseController {
 
     /**
-     * Show the page
+     * Show the banner
      *
      * @return Response
      */
     public function show($slug)
     {
-        $page = Page::where('slug', '=', $slug)->firstOrFail();
+        $banner = Banner::where('slug', '=', $slug)->firstOrFail();
 
-        $pageTitle = $page->title;
-        $pageDescription = $page->description;
-        $pageKeywords = $page->keywords;
+        $bannerTitle = $banner->title;
+        $bannerDescription = $banner->description;
+        $bannerKeywords = $banner->keywords;
 
         return View::make(
-            'page::page.show',
+            'banner::banner.show',
             compact(
-                'page', 'pageTitle', 'pageDescription', 'pageKeywords'
+                'banner', 'bannerTitle', 'bannerDescription', 'bannerKeywords'
             )
         );
     }

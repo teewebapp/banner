@@ -1,7 +1,6 @@
 {
     "enabled": true,
-    "seeder": "Tee\\Page\\Seeds\\DatabaseSeeder",
-    "provider": ["Tee\\Page\\ServiceProvider"],
-    "command": ["Tee\\Page\\Commands\\PagesReslug"],
+    "seeder": "Tee\\Banner\\Seeds\\DatabaseSeeder",
+    "provider": ["Tee\\Banner\\ServiceProvider"],
     "order": 20
 }

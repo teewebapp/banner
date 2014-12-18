@@ -1,6 +1,6 @@
 <?php
 
-namespace Tee\Page\Seeds;
+namespace Tee\Banner\Seeds;
 
 use Seeder;
 
@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder {
      */
     public function run()
     {
-        $this->call(__NAMESPACE__.'\\PageCategoryTableSeeder');
+        $this->call(__NAMESPACE__.'\\BannerCategoryTableSeeder');
     }
 
 }

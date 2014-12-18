@@ -1,18 +1,18 @@
 <?php
 
-namespace Tee\Page\Seeds;
+namespace Tee\Banner\Seeds;
 
-use Tee\Page\Models\PageCategory;
+use Tee\Banner\Models\Banner;
 use Seeder, DB, DateTime, Eloquent;
 
-class PageCategoryTableSeeder extends Seeder {
+class BannerTableSeeder extends Seeder {
 
     public function run() {
         Eloquent::unguard();
         #DB::table('page_categories')->delete();
-        PageCategory::create(array(
+        Banner::create(array(
             'name' => 'Páginas',
-            'type' => PageCategory::PAGE,
+            'type' => Banner::PAGE,
             'created_at' => new DateTime,
             'updated_at' => new DateTime
         ));

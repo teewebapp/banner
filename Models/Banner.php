@@ -1,6 +1,6 @@
 <?php
 
-namespace Tee\Page\Models;
+namespace Tee\Banner\Models;
 
 use Tee\System\Models\Model;
 
@@ -12,7 +12,7 @@ use Codesleeve\Stapler\ORM\EloquentTrait;
 
 use URL;
 
-class Page extends Model implements SluggableInterface, StaplerableInterface {
+class Banner extends Model implements SluggableInterface, StaplerableInterface {
     use SluggableTrait;
     use EloquentTrait; // Stapler Image Upload
 
@@ -20,7 +20,7 @@ class Page extends Model implements SluggableInterface, StaplerableInterface {
     const LINKED = 2;
 
     protected $defaults = array(
-        'type' => Page::NORMAL
+        'type' => Banner::NORMAL
     );
 
     protected $sluggable = array(
@@ -75,11 +75,11 @@ class Page extends Model implements SluggableInterface, StaplerableInterface {
     }
 
     public function category() {
-        return $this->belongsTo(__NAMESPACE__.'\\PageCategory', 'page_category_id');
+        return $this->belongsTo(__NAMESPACE__.'\\BannerCategory', 'page_category_id');
     }
 
     public function getUrlAttribute() {
-        if($this->type == Page::LINKED)
+        if($this->type == Banner::LINKED)
             return $this->link;
         else
             return URL::route('page.show', $this->slug);
