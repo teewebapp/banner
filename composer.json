@@ -1,7 +1,7 @@
 {
-	"name": "teewebapp/page",
+	"name": "teewebapp/banner",
 	"description": "Banner Module for TeeWebApp",
-	"keywords": ["teewebapp", "page"],
+	"keywords": ["teewebapp", "banner"],
 	"license": "MIT",
 	"require": {
 		"teewebapp/system": "dev-master@dev"
