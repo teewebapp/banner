@@ -3,19 +3,12 @@
 namespace Tee\Banner;
 use Route, Config;
 
-Route::group(['prefix' => Config::get('i18n.locale_preffix')], function() {
-    Route::any('/banners/{slug}', [
-        'as' => 'banner.show',
-        'uses' => __NAMESPACE__.'\Controllers\BannerController@show'
-    ]);
-});
-
 Route::group(['prefix' => 'admin'], function() {
-    Route::post('banner/order', [
-        'as' => 'admin.banner.order',
-        'uses' => __NAMESPACE__.'\Controllers\AdminController@order'
+    Route::post('banner_item/order', [
+        'as' => 'admin.banner_item.order',
+        'uses' => __NAMESPACE__.'\Controllers\Admin\ItemController@order'
     ]);
-    Route::resource('banner', __NAMESPACE__.'\Controllers\AdminController',
+    Route::resource('banner_item', __NAMESPACE__.'\Controllers\Admin\ItemController',
         ['except' => array('show')]
     );
 });

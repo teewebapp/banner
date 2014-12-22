@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder {
      */
     public function run()
     {
-        $this->call(__NAMESPACE__.'\\BannerCategoryTableSeeder');
+        $this->call(__NAMESPACE__.'\\BannerTableSeeder');
     }
 
 }

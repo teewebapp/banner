@@ -14,7 +14,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             $format = '<img src="%s" class="fa" />&nbsp;&nbsp;<span>%s</span>';
             $menu->add(
                 sprintf($format, moduleAsset('banner', 'images/icon_banner.png'), 'Banner'),
-                route('admin.banner.index')
+                route('admin.banner_item.index')
             );
         });
     }
