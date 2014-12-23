@@ -46,7 +46,7 @@
                 </div>
                 <div class="carousel-text">
                     <h2>{{{ $item->title }}}</h2>
-                    <p>{{ $item->description }}}</p>
+                    <p>{{{ $item->description }}}</p>
                     @if($item->url)
                         <a href="{{$item->url}}" class="btn btn-primary">Saiba mais</a>
                     @endif
