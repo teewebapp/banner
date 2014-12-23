@@ -22,7 +22,7 @@ class Banner extends Model {
         );
     }
 
-    public function itens() {
+    public function items() {
         return $this->hasMany(__NAMESPACE__.'\\BannerItem', 'banner_id');
     }
 }

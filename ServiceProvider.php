@@ -10,6 +10,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     public function register()
     {
+        Widget::register(
+            'mainBanner',
+            __NAMESPACE__.'\\Widgets\\MainBanner'
+        );
+
         Event::listen('admin::menu.load', function($menu) {
             $format = '<img src="%s" class="fa" />&nbsp;&nbsp;<span>%s</span>';
             $menu->add(
