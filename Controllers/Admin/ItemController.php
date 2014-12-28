@@ -13,18 +13,13 @@ use Tee\System\Breadcrumbs;
 use Tee\Admin\Controllers\ResourceController;
 
 class ItemController extends ResourceController {
-    public $resourceTitle = null;
+    public $resourceTitle = 'Banner';
     public $resourceName = 'banner_item';
     public $modelClass = 'Tee\\Banner\\Models\\BannerItem';
     public $moduleName = 'banner';
     public $orderable = true;
     public $orderBy = 'order';
     public $orderType = 'ASC';
-
-    public function __construct() {
-        $this->resourceTitle = $this->getBanner()->name;
-        parent::__construct();
-    }
 
     public function index() {
         View::share('orderable', $this->orderable);
