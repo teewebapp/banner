@@ -4,7 +4,7 @@
 	"keywords": ["teewebapp", "banner"],
 	"license": "MIT",
 	"require": {
-		"teewebapp/system": "dev-master@dev",
+		"teewebapp/system": "1.*",
 		"codesleeve/laravel-stapler": "1.*"
 	},
 	"autoload": {
