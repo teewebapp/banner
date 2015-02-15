@@ -9,11 +9,12 @@ class BannerTableSeeder extends Seeder {
 
     public function run() {
         Eloquent::unguard();
-
-        Banner::create(array(
-            'id' => 1,
-            'name' => 'Banner Principal',
-        ));
+        
+        $banner = new Banner();
+        $banner->id = 1;
+        $banner->name = 'Banner Principal';
+        $banner->site_id = currentSite()->id;
+        $banner->save();
     }
 
 }

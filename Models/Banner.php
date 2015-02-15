@@ -3,10 +3,11 @@
 namespace Tee\Banner\Models;
 
 use Tee\System\Models\Model;
-
+use Tee\System\Traits\CurrentSiteTrait;
 use URL;
 
 class Banner extends Model {
+    use CurrentSiteTrait;
 
 	public static $rules = [
 		'name' => 'required'
